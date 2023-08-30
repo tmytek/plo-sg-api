@@ -54,7 +54,9 @@ class return_code(Enum):
 
 
 class plo_sg_api:
+    __version = '1.0.0'
     def __init__(self, com=None) -> None:
+        print('plo-sg-api version:', self.__version)
         self.uart_header = [0xff, 0xfe]
         self.com = ''
         self.sn = ''
